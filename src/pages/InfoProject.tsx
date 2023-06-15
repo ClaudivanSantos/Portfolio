@@ -96,25 +96,30 @@ export function InfoProject() {
               ''
             )}
           </Box>
-          
+
           {project.youtube ? (
             <>
-              <Typography sx={{ color: '#fff' }} variant="h5">
-            Vídeo do projeto
-          </Typography>
-            <ReactPlayer
-              url={project.youtube}
-              controls
-              width="560px"
-              height="315px"
-            />
+              <Typography
+                sx={{ color: '#fff', marginBottom: '10px' }}
+                variant="h5"
+              >
+                Vídeo do projeto
+              </Typography>
+              <ReactPlayer
+                url={project.youtube}
+                controls
+                width={matches ? "560px" : '90%'}
+                height={matches ? "315px" : '200px' }
+              />
             </>
-            
           ) : (
             ''
           )}
 
-          <Typography sx={{ color: '#fff', marginBottom: '10px', marginTop: '20px' }} variant="h5">
+          <Typography
+            sx={{ color: '#fff', marginBottom: '10px', marginTop: '20px' }}
+            variant="h5"
+          >
             Tecnologias usadas
           </Typography>
           <Box sx={{ display: 'flex' }}>
